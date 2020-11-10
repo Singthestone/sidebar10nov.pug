@@ -1,0 +1,55 @@
+header.header
+    h1.header__titulo
+    nav.header__menu
+
+    //- Variable
+    -let nombre = 'Carlos'
+    //- Constante
+    -const profesor = 'Carlos'
+
+    h3 `Hola #{nombre}`
+
+//- ARRAY
+-const numeros = [23,45,8,12,90]
+
+li= numeros[2]
+
+h6= profesor
+
+//- OBJETO
+-
+    const persona = {
+        nombre : 'Carlos',
+        profesion : 'Diseñador',
+        lugar : 'Palma'
+    }
+
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        header.header#encabezado
+            ul
+                li: a(href="")
+                li: a(href="")
+                li: a(href="")
+
+        main.main
+            section.zona
+                p Hola soy un texto
+                    | de ejemplo
+                    span y esto es un span
+                    b esto es negrita
+                    i y italica
+
+        -let direccion = "http://www.googles.es"
+        -let imagenJPG = ["fondoPlaya", "bannerCieloNublado", "footer", "logo"]
+
+        a(href="direccion")
+        //- Para crear una clase con las constantes que antes hemos creado: podemos nombrarla y hacer que salga si el padre lo ponemos en "" y lo concatenamos con la constante.
+        img(class="main__" + imagenJPG[1], src="assets/" + imagenJPG[1] + ".jpg", alt=imagenJPG[1])
+

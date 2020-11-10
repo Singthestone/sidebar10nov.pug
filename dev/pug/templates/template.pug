@@ -1,0 +1,28 @@
+include ../config/config
+include ../mixins/content
+
+<!DOCTYPE html>
+html(lang="es")
+    //- HEAD
+    //- Con este tipo de include se mete todo el archivo .pug que hemos creado en otro lugar. Se incorpora en la línea exacta en la que llamamos.
+    include head.pug
+    block head
+    
+    body
+        header.header
+            include header.pug
+            block header
+
+
+        aside.sidebar
+            include aside.pug
+            block aside
+
+            
+        main.main
+            block main
+            +content
+
+        footer.footer
+            include footer.pug
+            block footer
